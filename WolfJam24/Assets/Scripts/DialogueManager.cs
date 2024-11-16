@@ -23,11 +23,13 @@ public class DialogueManager : MonoBehaviour
     private bool listenMore = false;
     private bool listenNext = false;
     private bool deliverNow = false;
+    private int caller = 0;
 
     private const string SPEAKER_TAG = "speaker";
     private const string LISTEN_TAG = "listen_again";
     private const string NEXT_TAG = "listen_next";
     private const string DELIVER_TAG = "deliver";
+    private const string CALLER_TAG = "caller";
     //private const string PORTRAIT_TAG = "portrait";
     #endregion
 
@@ -86,23 +88,44 @@ public class DialogueManager : MonoBehaviour
         }
         else if(listenMore)
         {
+            if(caller == 22)
+            {
+                currentStory = new Ink.Runtime.Story(listenAgain[1].text);
+            }
+            else if(caller == 33)
+            {
+                currentStory = new Ink.Runtime.Story(listenAgain[3].text);
+            }
+            else
+            {
+                currentStory = new Ink.Runtime.Story(listenAgain[0].text);
+            }
+
             dialoguePanel.SetActive(true);
-            currentStory = new Ink.Runtime.Story(listenAgain[0].text);
             ContinueStory();
         }
         else if (listenNext)
         {
-            if(storyOver == 2)
+            if (caller == 22)
             {
-                storyOver = 1;
+                currentStory = new Ink.Runtime.Story(listenAgain[2].text);
             }
-            else if(storyOver == 5)
+            else if (caller == 33)
             {
-                storyOver = 3;
+                caller = 32;
+                currentStory = new Ink.Runtime.Story(listenAgain[4].text);
+            }
+            else if(caller == 32)
+            {
+                currentStory = new Ink.Runtime.Story(listenAgain[5].text);
+            }
+            else
+            {
+                currentStory = new Ink.Runtime.Story(inkJSON[storyOver].text);
             }
 
             dialoguePanel.SetActive(true);
-            currentStory = new Ink.Runtime.Story(listenAgain[storyOver].text);
+            currentStory = new Ink.Runtime.Story(inkJSON[storyOver].text);
             ContinueStory();
         }
     }
@@ -175,6 +198,16 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case NEXT_TAG:
                     listenNext = tagValue == "true";
+                    break;
+                case CALLER_TAG:
+                    if(tagValue == "22")
+                    {
+                        caller = 22;
+                    }
+                    if(tagValue == "33")
+                    {
+                        caller = 33;
+                    }
                     break;
                 default:
                     break;
