@@ -1,14 +1,16 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Destination : MonoBehaviour
 {
 
+    private TextMeshProUGUI text;
+
     private string destName;
     private bool isCorrect = false;
-    private bool inside = false;
     public string Name => destName;
 
     private void Awake()
@@ -19,7 +21,8 @@ public class Destination : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        text.enabled = false;
+        text.text = destName;
     }
 
     public void SetCorrect(bool correct) {  isCorrect = correct; } 
@@ -27,17 +30,12 @@ public class Destination : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         DestinationManager.Instance.deliverButton.Enable(this);
+        text.enabled = true;
     }
-
-    private void OnTriggerStay2D(Collider2D collision)
-    {
-        inside = true;
-    }
-
     private void OnTriggerExit2D(Collider2D collision)
     {
         DestinationManager.Instance.deliverButton.Disable();
-        inside = false;
+        text.enabled = false;
     }
 
     public void DeliverPackage()
