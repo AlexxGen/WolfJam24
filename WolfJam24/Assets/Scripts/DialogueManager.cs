@@ -21,10 +21,12 @@ public class DialogueManager : MonoBehaviour
     private Ink.Runtime.Story currentStory;
     private TextMeshProUGUI[] choicesText;
     private bool listenMore = false;
+    private bool listenNext = false;
     private bool deliverNow = false;
 
     private const string SPEAKER_TAG = "speaker";
     private const string LISTEN_TAG = "listen_again";
+    private const string NEXT_TAG = "listen_next";
     private const string DELIVER_TAG = "deliver";
     //private const string PORTRAIT_TAG = "portrait";
     #endregion
@@ -84,6 +86,21 @@ public class DialogueManager : MonoBehaviour
         }
         else if(listenMore)
         {
+            dialoguePanel.SetActive(true);
+            currentStory = new Ink.Runtime.Story(listenAgain[0].text);
+            ContinueStory();
+        }
+        else if (listenNext)
+        {
+            if(storyOver == 2)
+            {
+                storyOver = 1;
+            }
+            else if(storyOver == 5)
+            {
+                storyOver = 3;
+            }
+
             dialoguePanel.SetActive(true);
             currentStory = new Ink.Runtime.Story(listenAgain[storyOver].text);
             ContinueStory();
@@ -155,6 +172,9 @@ public class DialogueManager : MonoBehaviour
                     break;
                 case DELIVER_TAG:
                     deliverNow = tagValue == "true";
+                    break;
+                case NEXT_TAG:
+                    listenNext = tagValue == "true";
                     break;
                 default:
                     break;
