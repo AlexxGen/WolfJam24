@@ -9,15 +9,22 @@ public class GameManager : MonoBehaviour
 
     public float[] correctFrequencies = new float[3];
 
+    public bool deliveredGood = false;
+
     private int currentPackage = 0;
 
     public int CurrentPackage => currentPackage;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         if (Instance != null) Destroy(gameObject);
         Instance = this;
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+
     }
 
     public void NextPackage()

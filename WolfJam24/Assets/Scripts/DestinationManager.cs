@@ -4,8 +4,16 @@ using UnityEngine;
 
 public class DestinationManager : MonoBehaviour
 {
+    public static DestinationManager Instance;
+
+    public DeliverButton deliverButton;
 
     private Destination[] destinations;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     // Start is called before the first frame update
     void Start()

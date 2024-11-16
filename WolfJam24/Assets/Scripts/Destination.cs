@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Destination : MonoBehaviour
 {
@@ -41,8 +42,8 @@ public class Destination : MonoBehaviour
 
     public void DeliverPackage()
     {
-        if (isCorrect) print("You did it!");
-        else print("You failed");
+        GameManager.Instance.deliveredGood = isCorrect;
+        SceneManager.LoadScene(1); // TODO: Change to index of cutscene scene
     }
 
     // Update is called once per frame
