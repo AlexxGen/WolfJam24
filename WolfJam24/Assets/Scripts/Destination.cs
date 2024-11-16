@@ -26,8 +26,7 @@ public class Destination : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        // Delivery stuff
-        print("Now arriving at " + destName);   
+        DestinationManager.Instance.deliverButton.Enable(this);
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -37,6 +36,7 @@ public class Destination : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
+        DestinationManager.Instance.deliverButton.Disable();
         inside = false;
     }
 
@@ -49,9 +49,6 @@ public class Destination : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (inside && Input.GetKeyDown(KeyCode.E))
-        {
-            DeliverPackage();
-        }
+
     }
 }
