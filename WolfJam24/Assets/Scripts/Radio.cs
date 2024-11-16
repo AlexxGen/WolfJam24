@@ -4,8 +4,6 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-using CallerPair = System.Collections.Generic.KeyValuePair<float, System.Collections.Generic.List<Caller>>;
-
 public class Radio : MonoBehaviour
 {
 
@@ -14,26 +12,11 @@ public class Radio : MonoBehaviour
     private float sliderValue;
     private float timer;
 
-    public Caller[] callers;
-    private CallerPair[] callerList = new CallerPair[3];
-    private int currentPackage = GameManager.Instance.CurrentPackage;
-
     [SerializeField] private AudioSource audioStatic;
     [SerializeField] private float audioStaticDivisor;
 
     void Start()
     {
-        currentPackage = 0;
-        for (int i = 0; i < 2; i++)
-        {
-            callerList[i] = new(GameManager.Instance.correctFrequencies[i], new());
-        }
-
-        foreach (Caller c in callers)
-        {
-            callerList[c.packageNum].Value.Add(c);
-        }
-
         slider.onValueChanged.AddListener((val) =>
         {
             sliderValue = Mathf.Round(val * 10f) / 10f; 
@@ -43,7 +26,7 @@ public class Radio : MonoBehaviour
 
     private void Update()
     {
-        LockSlider(callerList[currentPackage].Key);
+        LockSlider(GameManager.Instance.correctFrequencies[GameManager.Instance.CurrentPackage]);
     }
 
     private void LockSlider(float freq)
