@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -23,13 +24,15 @@ public class DialogueManager : MonoBehaviour
     private bool listenMore = false;
     private bool listenNext = false;
     private bool deliverNow = false;
-    private int caller = 0;
+    static private int caller;
+    static private int prev_caller;
 
     private const string SPEAKER_TAG = "speaker";
     private const string LISTEN_TAG = "listen_again";
     private const string NEXT_TAG = "listen_next";
     private const string DELIVER_TAG = "deliver";
     private const string CALLER_TAG = "caller";
+    private const string PREV_TAG = "prev_caller";
     //private const string PORTRAIT_TAG = "portrait";
     #endregion
 
@@ -51,11 +54,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        Debug.Log(storyOver);
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("DialogueTrigger"))
@@ -72,7 +70,19 @@ public class DialogueManager : MonoBehaviour
     private void EnterDialogueMode()
     {
         dialoguePanel.SetActive(true);
-        currentStory = new Ink.Runtime.Story(inkJSON[storyOver].text);
+        if (caller == 11)
+        {
+            currentStory = new Ink.Runtime.Story(inkJSON[1].text);
+        }
+        else if (caller == 12 || caller == 22)
+        {
+            currentStory = new Ink.Runtime.Story(inkJSON[3].text);
+        }
+        else
+        {
+            currentStory = new Ink.Runtime.Story(inkJSON[0].text);
+        }
+        
         ContinueStory();
     }
 
@@ -88,11 +98,11 @@ public class DialogueManager : MonoBehaviour
         }
         else if(listenMore)
         {
-            if(caller == 22)
+            if(caller == 12 || caller == 22)
             {
                 currentStory = new Ink.Runtime.Story(listenAgain[1].text);
             }
-            else if(caller == 33)
+            else if(caller == 13 || caller == 23 || caller == 33)
             {
                 currentStory = new Ink.Runtime.Story(listenAgain[3].text);
             }
@@ -106,26 +116,41 @@ public class DialogueManager : MonoBehaviour
         }
         else if (listenNext)
         {
-            if (caller == 22)
+            if (caller == 12)
             {
-                currentStory = new Ink.Runtime.Story(listenAgain[2].text);
+                if (prev_caller == 22)
+                {
+                    currentStory = new Ink.Runtime.Story(listenAgain[2].text);
+                }
+                else
+                {
+                    currentStory = new Ink.Runtime.Story(inkJSON[2].text);
+                }
             }
-            else if (caller == 33)
+            else if (caller == 13)
             {
-                caller = 32;
-                currentStory = new Ink.Runtime.Story(listenAgain[4].text);
+                if(prev_caller == 33)
+                {
+                    currentStory = new Ink.Runtime.Story(listenAgain[4].text);
+                }
+                else
+                {
+                    currentStory = new Ink.Runtime.Story(inkJSON[4].text);
+                }
             }
-            else if(caller == 32)
+            else if(caller == 23)
             {
-                currentStory = new Ink.Runtime.Story(listenAgain[5].text);
+                if(prev_caller == 33)
+                {
+                    currentStory = new Ink.Runtime.Story(listenAgain[5].text);
+                }
+                else
+                {
+                    currentStory = new Ink.Runtime.Story(inkJSON[5].text);
+                }
             }
-            else
-            {
-                currentStory = new Ink.Runtime.Story(inkJSON[storyOver].text);
-            }
-
+            
             dialoguePanel.SetActive(true);
-            currentStory = new Ink.Runtime.Story(inkJSON[storyOver].text);
             ContinueStory();
         }
     }
@@ -200,13 +225,49 @@ public class DialogueManager : MonoBehaviour
                     listenNext = tagValue == "true";
                     break;
                 case CALLER_TAG:
-                    if(tagValue == "22")
+                    switch (tagValue)
                     {
-                        caller = 22;
+                        case "11":
+                            caller = 11;
+                            break;
+                        case "12":
+                            caller = 12;
+                            break;
+                        case "22":
+                            caller = 22;
+                            break;
+                        case "13":
+                            caller = 13;
+                            break;
+                        case "23":
+                            caller = 23;
+                            break;
+                        case "33":
+                            caller = 33;
+                            break;
                     }
-                    if(tagValue == "33")
+                    break;
+                case PREV_TAG:
+                    switch (tagValue)
                     {
-                        caller = 33;
+                        case "11":
+                            prev_caller = 11;
+                            break;
+                        case "12":
+                            prev_caller = 12;
+                            break;
+                        case "22":
+                            prev_caller = 22;
+                            break;
+                        case "13":
+                            prev_caller = 13;
+                            break;
+                        case "23":
+                            prev_caller = 23;
+                            break;
+                        case "33":
+                            prev_caller = 33;
+                            break;
                     }
                     break;
                 default:

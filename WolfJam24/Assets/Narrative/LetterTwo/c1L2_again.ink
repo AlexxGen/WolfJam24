@@ -1,6 +1,7 @@
-#listen_again = false
-#listen_next = false
-#deliver = false
+#listen_again: false
+#listen_next: false
+#deliver: false
+#caller: 12
 #speaker: Caller One 
 Hello? Oh, you wanted to hear my thoughts about the letter again?
 Yeah, I'm a CS major, and so is my girlfriend. 
@@ -14,9 +15,10 @@ Thanks for being willing to share again. Really appreciated, buddy.
     * [Listen to next caller again] -> next
 
 == next ==
-#listen_next = true
+#prev_caller: 22
+#listen_next: true
     -> END
     
 == deliver ==
-#deliver = true
+#deliver: true
     -> END
