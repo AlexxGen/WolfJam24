@@ -35,20 +35,20 @@ public class TruckController : MonoBehaviour
         }
         if (movement != 0)
         {
-            int angular = 0;
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                angular--;
-            }
-            if (Input.GetKey(KeyCode.A))
-            {
-                angular++;
-            }
-
             rb.velocity = movement * speed * transform.up;
-            rb.angularVelocity = angular * turnSpeed;
         }
         else rb.angularVelocity = 0;
+
+        int angular = 0;
+
+        if (Input.GetKey(KeyCode.D))
+        {
+            angular--;
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            angular++;
+        }
+        rb.angularVelocity = angular * turnSpeed;
     }
 }
