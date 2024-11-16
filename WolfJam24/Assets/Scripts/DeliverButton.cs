@@ -9,7 +9,7 @@ public class DeliverButton : MonoBehaviour
 
     private SpriteRenderer sp;
     private bool isEnabled = false;
-    private Destination destination
+    private Destination destination;
 
     // Start is called before the first frame update
     void Start()
