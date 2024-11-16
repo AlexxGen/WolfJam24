@@ -15,10 +15,11 @@ public class Radio : MonoBehaviour
     public Caller[] callers;
     private CallerPair[] callerList = new CallerPair[3];
 
-    // Start is called before the first frame update
+    private float timer;
+
     void Start()
     {
-        for (int i = 0; i < 2; i++)
+        /*for (int i = 0; i < 2; i++)
         {
             callerList[i] = new(GameManager.Instance.correctFrequencies[i], new());
         }
@@ -26,18 +27,20 @@ public class Radio : MonoBehaviour
         foreach (Caller c in callers)
         {
             callerList[c.packageNum].Value.Add(c);
-        }
+        }*/
 
         slider.onValueChanged.AddListener((val) =>
         {
-            val = Mathf.Round(val * 10) / 10;
-            sliderText.text = val.ToString();
+            val = Mathf.Round(val * 10f) / 10f;
+            sliderText.text = val.ToString("0.0");
         });
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (sliderText.text != "106.7") { timer = 0.0f; }
+        else timer += Time.deltaTime;
+
+        if (timer > 1f) { slider.interactable = false; }
     }
 }

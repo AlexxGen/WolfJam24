@@ -322,7 +322,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 60
+  m_text: 90.0
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -686,10 +686,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 90838124}
   m_HandleRect: {fileID: 2003894972}
   m_Direction: 0
-  m_MinValue: 60
-  m_MaxValue: 120
+  m_MinValue: 90
+  m_MaxValue: 110
   m_WholeNumbers: 0
-  m_Value: 60
+  m_Value: 90
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -719,6 +719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1624017036}
   sliderText: {fileID: 329926109}
+  callers: []
 --- !u!1 &1852123785
 GameObject:
   m_ObjectHideFlags: 0
