@@ -14,7 +14,8 @@ public class SliderScript : MonoBehaviour
     {
         slider.onValueChanged.AddListener((v) =>
         {
-            sliderText.text = v.ToString();
+            v = Mathf.Round(v * 10);
+            sliderText.text = (v / 10).ToString();
         });
     }
 
