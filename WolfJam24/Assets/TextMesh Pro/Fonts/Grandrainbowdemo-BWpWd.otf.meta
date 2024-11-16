@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 91ecba6e5e6708c4aa44885abd8f8ebd
+guid: d81739a05d7013b48bd639175eb8d91a
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - QUARTZO
+  - Grand Rainbow Demo
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
