@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Destination : MonoBehaviour
 {
 
-    private TextMeshProUGUI text;
+    private TextMeshPro text;
 
     private string destName;
     private bool isCorrect = false;
@@ -21,6 +21,7 @@ public class Destination : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        text = GetComponentInChildren<TextMeshPro>();
         text.enabled = false;
         text.text = destName;
     }

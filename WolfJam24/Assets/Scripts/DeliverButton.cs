@@ -15,6 +15,7 @@ public class DeliverButton : MonoBehaviour
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
+        Disable();
     }
 
     public void Enable(Destination dest)
