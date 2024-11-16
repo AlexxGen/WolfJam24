@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8171241109189687163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2551279455427745065}
+  - component: {fileID: 9079788203183126999}
+  m_Layer: 0
+  m_Name: DialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2551279455427745065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171241109189687163}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 448.95956, y: 135.8792, z: -1.214946}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9079788203183126999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8171241109189687163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b988815a5844cc246b4c7fee6748aa8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 0}
+  dialogueText: {fileID: 0}
+  displayName: {fileID: 0}
+  inkJSON:
+  - {fileID: 4900000, guid: 4afc1936be59e7c4199ce3ec23a2bb36, type: 3}
+  - {fileID: 4900000, guid: 66decdb4c2e7a28428ac4ea17cd59957, type: 3}
+  - {fileID: 4900000, guid: 44250f1e1543bdd4aa8c8db7334e9037, type: 3}
+  - {fileID: 4900000, guid: 2ee636856ae1d8a41b092420e27d0d9c, type: 3}
+  - {fileID: 4900000, guid: b2a2898768e76c14e83da0426585683a, type: 3}
+  - {fileID: 4900000, guid: 4d8c8e27c10e07a4096aa49090346b12, type: 3}
+  listenAgain:
+  - {fileID: 4900000, guid: 1f29469d43258304d9d07df653df51d3, type: 3}
+  - {fileID: 4900000, guid: 0be1ace25b57e484d9c7f77e163e37ba, type: 3}
+  - {fileID: 4900000, guid: b7c4f61184542074a93a7e7e2e93acc5, type: 3}
+  choices:
+  - {fileID: 0}
+  - {fileID: 0}
+  continueBtn: {fileID: 0}

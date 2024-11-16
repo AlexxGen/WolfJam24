@@ -7,6 +7,6 @@ public class button : MonoBehaviour
 {
     public void LoadTest()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("DialogueTest");
     }
 }
