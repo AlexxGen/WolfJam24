@@ -1,6 +1,7 @@
 #listen_again: false
 #deliver: false
 #listen_next: false
+#caller: 12
 #speaker: You
 Alrighty, time for our next letter.
 This is such a jolly and cute one, a rare find these days.
@@ -62,9 +63,9 @@ Sure, I live.
     * [Deliver] -> deliver
     
 == next ==
-#listen_next = true
+#listen_next: true
     -> END
     
 == deliver ==
-#deliver = true
+#deliver: true
     -> END
