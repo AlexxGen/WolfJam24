@@ -2308,7 +2308,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -150.14996, y: 72.20999}
+  m_AnchoredPosition: {x: -150.14998, y: 72.20999}
   m_SizeDelta: {x: -478.5, y: -559.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1131060959
@@ -2517,7 +2517,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -150.14996, y: 72.20999}
+  m_AnchoredPosition: {x: -150.14998, y: 72.20999}
   m_SizeDelta: {x: -478.5, y: -559.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1208061357
@@ -3586,7 +3586,7 @@ AudioSource:
   m_GameObject: {fileID: 1698201528}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: -533744460470627954, guid: de6952b30f63ad546ade41fd6f354df6, type: 2}
   m_audioClip: {fileID: 8300000, guid: 3ac6ea0a39a66a0499cb2e224d7aa544, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.5
@@ -3945,7 +3945,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1885234332}
   sliderText: {fileID: 234541800}
-  callers: []
   audioStatic: {fileID: 1698201530}
   audioStaticDivisor: 30
 --- !u!114 &1885234332
