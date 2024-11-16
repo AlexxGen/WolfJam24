@@ -12,16 +12,19 @@ public class Radio : MonoBehaviour
     [SerializeField] private Slider slider;
     [SerializeField] private TextMeshProUGUI sliderText;
     private float sliderValue;
+    private float timer;
 
     public Caller[] callers;
     private CallerPair[] callerList = new CallerPair[3];
+    private int currentPackage = GameManager.Instance.CurrentPackage;
 
-    private float timer;
     [SerializeField] private AudioSource audioStatic;
+    [SerializeField] private float audioStaticDivisor;
 
     void Start()
     {
-        /*for (int i = 0; i < 2; i++)
+        currentPackage = 0;
+        for (int i = 0; i < 2; i++)
         {
             callerList[i] = new(GameManager.Instance.correctFrequencies[i], new());
         }
@@ -29,7 +32,7 @@ public class Radio : MonoBehaviour
         foreach (Caller c in callers)
         {
             callerList[c.packageNum].Value.Add(c);
-        }*/
+        }
 
         slider.onValueChanged.AddListener((val) =>
         {
@@ -40,12 +43,22 @@ public class Radio : MonoBehaviour
 
     private void Update()
     {
-        //currently hard coded for testing
-        if (sliderText.text != "106.7") { timer = 0.0f; }
+        LockSlider(callerList[currentPackage].Key);
+    }
+
+    private void LockSlider(float freq)
+    {
+        if (sliderValue != freq) { timer = 0.0f; }
         else timer += Time.deltaTime;
 
-        if (timer > 2f) { slider.interactable = false; }
-        audioStatic.volume = Mathf.Abs(sliderValue - 106.7f)/100f;
-
+        if (timer > 1.5f) { slider.interactable = false; }
+        audioStatic.volume = Mathf.Abs(sliderValue - freq) / audioStaticDivisor;
     }
 }
+
+/*if (sliderText.text != "106.7") { timer = 0.0f; }
+else timer += Time.deltaTime;
+
+if (timer > 2f) { slider.interactable = false; }
+audioStatic.volume = Mathf.Abs(sliderValue - 106.7f) / 100f;
+break;*/
