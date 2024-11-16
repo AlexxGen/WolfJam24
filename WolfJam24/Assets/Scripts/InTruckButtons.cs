@@ -6,10 +6,29 @@ using UnityEngine.UI;
 public class InTruckButtons : MonoBehaviour
 {
     public GameObject[] envelopes;
+    public GameManager manager;
+
+    public void Start()
+    {
+        for(int i = 0;  i < envelopes.Length; i++)
+        {
+            envelopes[i].SetActive(false);
+        }
+
+        if(manager.CurrentPackage == 0)
+        {
+            envelopes[0].SetActive(true);
+        } else if (manager.CurrentPackage == 1)
+        {
+            envelopes[3].SetActive(true);
+        } else if(manager.CurrentPackage == 2)
+        {
+            envelopes[6].SetActive(true);
+        }
+    }
 
     public void envelope1_b()
     {
-        Debug.Log(envelopes[0].name); 
         envelopes[1].SetActive(true);
         envelopes[0].SetActive(false);
     }
