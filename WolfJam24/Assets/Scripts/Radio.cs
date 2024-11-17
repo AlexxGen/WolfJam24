@@ -12,15 +12,19 @@ public class Radio : MonoBehaviour
     public GameObject phone;
 
     private float sliderValue;
-    private float timer;
+    private float timer = 0;
 
     private float correctFrequency;
+    private bool onCorrectFrequency;
 
     [SerializeField] private AudioSource audioStatic;
     [SerializeField] private float audioStaticDivisor;
 
     void Start()
     {
+        onCorrectFrequency = false;
+        correctFrequency = GameManager.Instance.CorrectFrequency;
+
         slider.onValueChanged.AddListener((val) =>
         {
             sliderValue = Mathf.Round(val * 10f) / 10f; 
@@ -35,9 +39,11 @@ public class Radio : MonoBehaviour
 
     private void Update()
     {
-        print(correctFrequency);
-        correctFrequency = GameManager.Instance.correctFrequencies[GameManager.Instance.CurrentPackage];
-        LockSlider(correctFrequency);
+        if (!onCorrectFrequency)
+        {
+            print(correctFrequency);
+            LockSlider(correctFrequency);
+        }
     }
 
     private void LockSlider(float freq)
@@ -46,7 +52,8 @@ public class Radio : MonoBehaviour
         else timer += Time.deltaTime;
 
         if (timer > 0.5f) 
-        { 
+        {
+            onCorrectFrequency = true;
             CorrectFrequencySelected();
             slider.interactable = false;
         }
