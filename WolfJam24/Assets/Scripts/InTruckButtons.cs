@@ -14,9 +14,6 @@ public class InTruckButtons : MonoBehaviour
     public GameObject clipBoard;
     public GameObject clipBoard_1;
 
-
-    [SerializeField] private AudioSource[] envelopeNoises;
-
     public void Start()
     {
         for(int i = 0;  i < envelopes.Length; i++)
@@ -115,11 +112,13 @@ public class InTruckButtons : MonoBehaviour
     {
         if(radio.activeSelf == true)
         {
+            Radio.Instance.ToggleAudio(false);
             radio.SetActive(false);
         }
         else
         {
             radio.SetActive(true);
+            Radio.Instance.ToggleAudio(true);
         }
     }
     public void quit()
