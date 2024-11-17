@@ -30,6 +30,9 @@ public class Radio : MonoBehaviour
             sliderValue = Mathf.Round(val * 10f) / 10f; 
             sliderText.text = sliderValue.ToString("0.0");
         });
+        sliderValue = 90f;
+        audioStatic.volume = Mathf.Abs(sliderValue - correctFrequency) / audioStaticDivisor;
+        audioStatic.Play();
     }
 
     private void CorrectFrequencySelected()
@@ -41,7 +44,6 @@ public class Radio : MonoBehaviour
     {
         if (!onCorrectFrequency)
         {
-            print(correctFrequency);
             LockSlider(correctFrequency);
         }
     }
@@ -60,10 +62,3 @@ public class Radio : MonoBehaviour
         audioStatic.volume = Mathf.Abs(sliderValue - freq) / audioStaticDivisor;
     }
 }
-
-/*if (sliderText.text != "106.7") { timer = 0.0f; }
-else timer += Time.deltaTime;
-
-if (timer > 2f) { slider.interactable = false; }
-audioStatic.volume = Mathf.Abs(sliderValue - 106.7f) / 100f;
-break;*/
