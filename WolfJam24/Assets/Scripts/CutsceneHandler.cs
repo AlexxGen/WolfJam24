@@ -6,28 +6,53 @@ using UnityEngine.UI;
 
 public class CutsceneHandler : MonoBehaviour
 {
-    public Image[] goodImages;
-    public Image[] badImages; 
-    public float cutsceneLength;
+    public Image[] bgImages;
+    public Image goodPerson;
+    public Image badPerson;
+    public Image sadPerson;
+
+    int randomIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < goodImages.Length; i++)
+        foreach (Image i in bgImages) i.enabled = false;
+
+        randomIndex = Random.Range(0, bgImages.Length);
+        bgImages[randomIndex].enabled = true;
+
+        sadPerson.enabled = false;
+
+        if (GameManager.Instance.deliveredGood)
         {
-            goodImages[i].enabled = false;
-            badImages[i].enabled = false;
+            badPerson.enabled = false;
+            goodPerson.enabled = true;
+        }
+        else
+        {
+            goodPerson.enabled = false;
+            badPerson.enabled = true;
         }
 
-        if (GameManager.Instance.deliveredGood) goodImages[GameManager.Instance.CurrentPackage].enabled = true;
-        else badImages[GameManager.Instance.CurrentPackage].enabled = true;
         StartCoroutine(WaitThenChangeScene());
     }
 
     private IEnumerator WaitThenChangeScene()
     {
-        yield return new WaitForSeconds(cutsceneLength);
+        yield return new WaitForSeconds(5f);
         GameManager.Instance.NextPackage();
+
+        if (!GameManager.Instance.deliveredGood)
+        {
+            int newIndex = randomIndex;
+            while (newIndex == randomIndex) newIndex = Random.Range(0, bgImages.Length);
+            bgImages[randomIndex].enabled = false;
+            bgImages[newIndex].enabled = true;
+            badPerson.enabled = false;
+            sadPerson.enabled = true;
+            yield return new WaitForSeconds(2f);
+        }
+
         SceneManager.LoadScene("InTruck");
     }
 }
