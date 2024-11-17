@@ -569,8 +569,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124, y: -55}
-  m_SizeDelta: {x: 351.08, y: 53.66}
+  m_AnchoredPosition: {x: -247.72, y: -29}
+  m_SizeDelta: {x: 109.65, y: 53.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &369510088
 MonoBehaviour:
@@ -1788,8 +1788,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -247, y: 69}
-  m_SizeDelta: {x: 159.92, y: 98.87}
+  m_AnchoredPosition: {x: -258.13, y: 69}
+  m_SizeDelta: {x: 182.17, y: 98.87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1039004451
 MonoBehaviour:
@@ -1995,7 +1995,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1172732031
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2122,7 +2122,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "#Uppbeat:\r\n[https://uppbeat.io/t/kevin-macleod/wagon-wheel] \r[https://freesound.org/people/soundslikewillem/sounds/421724/]\n[https://freesound.org/people/ChristmasKrumble666/sounds/728130/]\n\n"
+  m_text: "[https://uppbeat.io]\nWagon Wheel by Kevin Macleod\n[https://freesound.org]:\nCasette
+    Surface noise by soundslikewillem \nCurse Me by ChristmasKrumble666\nJust Regular
+    Radio Static - Industrial SFX by 9voltplasma\ncar38 by car_sound\nClick by lebaston100\nenvelope_handling_rustle_vtkproductions.wav
+    by deleted_user_389799\n\n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2b44e8299d49904aacbd30580ae5e28, type: 2}
   m_sharedMaterial: {fileID: -1013795129926069479, guid: b2b44e8299d49904aacbd30580ae5e28, type: 2}
@@ -2149,8 +2152,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20
-  m_fontSizeBase: 20
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3006,8 +3009,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 142.99998, y: -153}
-  m_SizeDelta: {x: 340.36, y: 134.91}
+  m_AnchoredPosition: {x: 136.96002, y: -169.63}
+  m_SizeDelta: {x: 461.14, y: 138.18}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1690659594
 MonoBehaviour:
@@ -3029,8 +3032,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Silvertones by Khurasan [https://www.fontspace.com/silvertones-font-f123749]
-    \r\n\n\n\n"
+  m_text: "[https://www.fontspace.com] \r\nSilvertones by Khurasan \nDigital Display
+    by Chequered Ink \nRough Serif by Lukas Krakora \nGrand Rainbow by Mindtype Co.
+    \nMagic Saturday by Essentials Studio \n\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2b44e8299d49904aacbd30580ae5e28, type: 2}
   m_sharedMaterial: {fileID: -1013795129926069479, guid: b2b44e8299d49904aacbd30580ae5e28, type: 2}
@@ -3057,8 +3061,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 25
-  m_fontSizeBase: 25
+  m_fontSize: 15
+  m_fontSizeBase: 15
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -3141,8 +3145,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -153, y: 130}
-  m_SizeDelta: {x: 401.14, y: 48.24}
+  m_AnchoredPosition: {x: -256.23, y: 130}
+  m_SizeDelta: {x: 194.69, y: 48.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714145411
 MonoBehaviour:
@@ -3275,8 +3279,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -244, y: -97}
-  m_SizeDelta: {x: 169.44, y: 66.37}
+  m_AnchoredPosition: {x: -250, y: -70}
+  m_SizeDelta: {x: 204.42, y: 66.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1734847949
 MonoBehaviour:
@@ -3298,9 +3302,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Alex Genchev
+  m_text: 'Nickolas Ho
 
-    Nickolas Ho'
+    Alex Genchev
+
+    Anisha Biswas
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b2b44e8299d49904aacbd30580ae5e28, type: 2}
   m_sharedMaterial: {fileID: -1013795129926069479, guid: b2b44e8299d49904aacbd30580ae5e28, type: 2}
@@ -3755,8 +3763,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 191.99998, y: -82}
-  m_SizeDelta: {x: 188.37, y: 53.66}
+  m_AnchoredPosition: {x: 196, y: -91}
+  m_SizeDelta: {x: 188.37, y: 46.26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1990127143
 MonoBehaviour:
@@ -4031,8 +4039,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -244, y: -214}
-  m_SizeDelta: {x: 425.23, y: 67.34}
+  m_AnchoredPosition: {x: -250, y: -207}
+  m_SizeDelta: {x: 282.84, y: 67.34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2088433490
 MonoBehaviour:
@@ -4167,8 +4175,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -113, y: -167}
-  m_SizeDelta: {x: 351.08, y: 53.66}
+  m_AnchoredPosition: {x: -244, y: -167}
+  m_SizeDelta: {x: 114.77, y: 53.66}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2098512190
 MonoBehaviour:
