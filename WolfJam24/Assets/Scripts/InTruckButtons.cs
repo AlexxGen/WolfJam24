@@ -10,6 +10,8 @@ public class InTruckButtons : MonoBehaviour
     public GameManager manager;
     public GameObject settingsPanel;
     public GameObject radio;
+    public GameObject clipBoard;
+    public GameObject clipBoard_1;
 
     public void Start()
     {
@@ -91,6 +93,18 @@ public class InTruckButtons : MonoBehaviour
     public void settingsOff()
     {
         settingsPanel.SetActive(false);
+    }
+
+    public void clipBoardOn()
+    {
+        clipBoard_1.SetActive(true);
+        clipBoard.SetActive(false);
+    }
+
+    public void clipBoardOff()
+    {
+        clipBoard.SetActive(true);
+        clipBoard_1.SetActive(false);
     }
 
     public void radioToggle()
