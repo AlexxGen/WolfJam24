@@ -23,7 +23,13 @@ public class Radio : MonoBehaviour
         {
             sliderValue = Mathf.Round(val * 10f) / 10f; 
             sliderText.text = sliderValue.ToString("0.0");
+            if (val == correctFrequency) CorrectFrequencySelected();
         });
+    }
+
+    private void CorrectFrequencySelected()
+    {
+
     }
 
     private void Update()
