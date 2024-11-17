@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    public float[] correctFrequencies = new float[3];
+    public float[] correctFrequencies = {100.8f, 92.0f, 97.3f};
 
     public bool deliveredGood = false;
 
@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     public void NextPackage()
