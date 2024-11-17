@@ -7,6 +7,8 @@ using UnityEngine.UI;
 public class Radio : MonoBehaviour
 {
 
+    public static Radio Instance;
+
     [SerializeField] private Slider slider;
     [SerializeField] private TextMeshProUGUI sliderText;
     public GameObject phone;
@@ -21,6 +23,11 @@ public class Radio : MonoBehaviour
     [SerializeField] private float audioStaticDivisor;
     [SerializeField] private AudioSource audioPhone;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         onCorrectFrequency = false;
@@ -31,9 +38,8 @@ public class Radio : MonoBehaviour
             sliderValue = Mathf.Round(val * 10f) / 10f; 
             sliderText.text = sliderValue.ToString("0.0");
         });
-        sliderValue = 90f;
+        sliderValue = slider.minValue;
         audioStatic.volume = Mathf.Abs(sliderValue - correctFrequency) / audioStaticDivisor;
-        audioStatic.Play();
     }
 
     private void CorrectFrequencySelected()
@@ -62,5 +68,11 @@ public class Radio : MonoBehaviour
             audioPhone.Play();
         }
         audioStatic.volume = Mathf.Abs(sliderValue - freq) / audioStaticDivisor;
+    }
+
+    public void ToggleAudio(bool on)
+    {
+        if (on) audioStatic.Play();
+        else audioStatic.Stop();
     }
 }

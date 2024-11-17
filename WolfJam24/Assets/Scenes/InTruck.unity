@@ -6989,7 +6989,6 @@ MonoBehaviour:
   radio: {fileID: 1197192036}
   clipBoard: {fileID: 713725603}
   clipBoard_1: {fileID: 675186242}
-  envelopeNoises: []
 --- !u!1 &1698201528
 GameObject:
   m_ObjectHideFlags: 0
@@ -7579,10 +7578,10 @@ MonoBehaviour:
   m_FillRect: {fileID: 1271031537}
   m_HandleRect: {fileID: 178523559}
   m_Direction: 0
-  m_MinValue: 90
-  m_MaxValue: 110
+  m_MinValue: 95
+  m_MaxValue: 108
   m_WholeNumbers: 0
-  m_Value: 90
+  m_Value: 95
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
