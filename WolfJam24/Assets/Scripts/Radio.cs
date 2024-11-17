@@ -12,6 +12,8 @@ public class Radio : MonoBehaviour
     private float sliderValue;
     private float timer;
 
+    private float correctFrequency;
+
     [SerializeField] private AudioSource audioStatic;
     [SerializeField] private float audioStaticDivisor;
 
@@ -24,9 +26,15 @@ public class Radio : MonoBehaviour
         });
     }
 
+    private void CorrectFrequencySelected()
+    {
+
+    }
+
     private void Update()
     {
-        LockSlider(GameManager.Instance.correctFrequencies[GameManager.Instance.CurrentPackage]);
+        correctFrequency = GameManager.Instance.correctFrequencies[GameManager.Instance.CurrentPackage];
+        LockSlider(correctFrequency);
     }
 
     private void LockSlider(float freq)
@@ -34,7 +42,11 @@ public class Radio : MonoBehaviour
         if (sliderValue != freq) { timer = 0.0f; }
         else timer += Time.deltaTime;
 
-        if (timer > 1.5f) { slider.interactable = false; }
+        if (timer > 1.5f) 
+        { 
+            CorrectFrequencySelected();
+            slider.interactable = false;
+        }
         audioStatic.volume = Mathf.Abs(sliderValue - freq) / audioStaticDivisor;
     }
 }

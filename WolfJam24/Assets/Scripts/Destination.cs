@@ -41,8 +41,9 @@ public class Destination : MonoBehaviour
 
     public void DeliverPackage()
     {
+        print("Delivery success");
         GameManager.Instance.deliveredGood = isCorrect;
-        SceneManager.LoadScene(1); // TODO: Change to index of cutscene scene
+        //SceneManager.LoadScene(1); // TODO: Change to index of cutscene scene
     }
 
     // Update is called once per frame

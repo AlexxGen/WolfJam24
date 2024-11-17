@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class DeliverButton : MonoBehaviour
 {
-
+    public float xOffset;
     public float yOffset;
 
     private SpriteRenderer sp;
+    private Transform[] children;
     private bool isEnabled = false;
     private Destination destination;
 
@@ -15,23 +16,30 @@ public class DeliverButton : MonoBehaviour
     void Start()
     {
         sp = GetComponent<SpriteRenderer>();
+        children = GetComponentsInChildren<Transform>();
         Disable();
     }
 
     public void Enable(Destination dest)
     {
         transform.position = dest.transform.position;
-        transform.position += new Vector3(0, yOffset);
+        transform.position += new Vector3(xOffset, yOffset);
 
         sp.enabled = true;
         isEnabled = true;
         destination = dest;
+
+        foreach (Transform t in children)
+        {
+            t.gameObject.SetActive(true);
+        }
     }
 
     private void OnMouseDown()
     {
         if (isEnabled)
         {
+            print("Deliver");
             destination.DeliverPackage();
         }
     }
@@ -40,6 +48,11 @@ public class DeliverButton : MonoBehaviour
     {
         sp.enabled = false;
         isEnabled = false;
+
+        foreach (Transform t in children)
+        {
+            t.gameObject.SetActive(false);
+        }
     }
 
     // Update is called once per frame
