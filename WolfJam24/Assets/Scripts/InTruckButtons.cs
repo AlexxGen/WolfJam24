@@ -8,7 +8,6 @@ using UnityEngine.UI;
 public class InTruckButtons : MonoBehaviour
 {
     public GameObject[] envelopes;
-    public GameManager manager;
     public GameObject settingsPanel;
     public GameObject radio;
     public GameObject clipBoard;
@@ -21,13 +20,13 @@ public class InTruckButtons : MonoBehaviour
             envelopes[i].SetActive(false);
         }
 
-        if(manager.CurrentPackage == 0)
+        if(GameManager.Instance.CurrentPackage == 0)
         {
             envelopes[0].SetActive(true);
-        } else if (manager.CurrentPackage == 1)
+        } else if (GameManager.Instance.CurrentPackage == 1)
         {
             envelopes[3].SetActive(true);
-        } else if(manager.CurrentPackage == 2)
+        } else if(GameManager.Instance.CurrentPackage == 2)
         {
             envelopes[6].SetActive(true);
         }
