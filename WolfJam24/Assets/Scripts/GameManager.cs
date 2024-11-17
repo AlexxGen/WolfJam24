@@ -7,12 +7,13 @@ public class GameManager : MonoBehaviour
 
     public static GameManager Instance;
 
-    public float[] correctFrequencies = {100.8f, 92.0f, 97.3f};
+    private float[] correctFrequencies = {100.8f, 92.0f, 97.3f};
 
     public bool deliveredGood = false;
 
     private int currentPackage = 0;
 
+    public float CorrectFrequency => correctFrequencies[currentPackage];
     public int CurrentPackage => currentPackage;
 
     private void Awake()
