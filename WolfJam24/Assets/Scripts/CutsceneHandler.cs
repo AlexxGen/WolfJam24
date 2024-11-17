@@ -55,7 +55,7 @@ public class CutsceneHandler : MonoBehaviour
             yield return new WaitForSeconds(2f);
         }
 
-        if (GameManager.Instance.CurrentPackage == 2) SceneManager.LoadScene("endScreen");
+        if (GameManager.Instance.CurrentPackage == 3) SceneManager.LoadScene("endScreen");
         else SceneManager.LoadScene("InTruck");
     }
 }
