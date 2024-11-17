@@ -6,32 +6,32 @@ using UnityEngine.UI;
 
 public class CutsceneHandler : MonoBehaviour
 {
-    public Image[] bgImages;
-    public Image goodPerson;
-    public Image badPerson;
-    public Image sadPerson;
+    public GameObject[] bgImages;
+    public GameObject goodPerson;
+    public GameObject badPerson;
+    public GameObject sadPerson;
 
     int randomIndex;
 
     // Start is called before the first frame update
     void Start()
     {
-        foreach (Image i in bgImages) i.enabled = false;
+        foreach (GameObject i in bgImages) i.SetActive(false);
 
         randomIndex = Random.Range(0, bgImages.Length);
-        bgImages[randomIndex].enabled = true;
+        bgImages[randomIndex].SetActive(true);
 
-        sadPerson.enabled = false;
+        sadPerson.SetActive(false);
 
         if (GameManager.Instance.deliveredGood)
         {
-            badPerson.enabled = false;
-            goodPerson.enabled = true;
+            badPerson.SetActive(false);
+            goodPerson.SetActive(true);
         }
         else
         {
-            goodPerson.enabled = false;
-            badPerson.enabled = true;
+            goodPerson.SetActive(false);
+            badPerson.SetActive(true);
         }
 
         StartCoroutine(WaitThenChangeScene());
@@ -46,10 +46,10 @@ public class CutsceneHandler : MonoBehaviour
         {
             int newIndex = randomIndex;
             while (newIndex == randomIndex) newIndex = Random.Range(0, bgImages.Length);
-            bgImages[randomIndex].enabled = false;
-            bgImages[newIndex].enabled = true;
-            badPerson.enabled = false;
-            sadPerson.enabled = true;
+            bgImages[randomIndex].SetActive(false);
+            bgImages[newIndex].SetActive(true);
+            badPerson.SetActive(false);
+            sadPerson.SetActive(true);
             yield return new WaitForSeconds(2f);
         }
 
