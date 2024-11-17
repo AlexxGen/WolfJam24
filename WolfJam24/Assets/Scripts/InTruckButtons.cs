@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class InTruckButtons : MonoBehaviour
 {
     public GameObject[] envelopes;
     public GameManager manager;
+    public GameObject settingsPanel;
+    public GameObject radio;
 
     public void Start()
     {
@@ -79,5 +82,31 @@ public class InTruckButtons : MonoBehaviour
     {
         envelopes[8].SetActive(false);
         envelopes[6].SetActive(true);
+    }
+
+    public void settingsOn()
+    {
+        settingsPanel.SetActive(true);
+    }
+    public void settingsOff()
+    {
+        settingsPanel.SetActive(false);
+    }
+
+    public void radioToggle()
+    {
+        if(radio.active == true)
+        {
+            radio.SetActive(false);
+        }
+        else
+        {
+            radio.SetActive(true);
+        }
+    }
+
+    public void quit()
+    {
+        SceneManager.LoadScene(0);
     }
 }
