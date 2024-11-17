@@ -19,7 +19,20 @@ public class DestinationManager : MonoBehaviour
     void Start()
     {
         destinations = GetComponentsInChildren<Destination>();
-        SetNewDestination("New York");
+        switch(GameManager.Instance.CurrentPackage) 
+        {
+            case 0:
+                SetNewDestination("Gaiyea");
+                break;
+
+            case 1:
+                SetNewDestination("Limeleaf");
+                break;
+
+            case 2:
+                SetNewDestination("Ritny");
+                break;
+        }
     }
 
     public void SetNewDestination(string nameOfCorrectDestination) 
