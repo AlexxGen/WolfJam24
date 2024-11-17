@@ -12,6 +12,8 @@ public class Radio : MonoBehaviour
     private float sliderValue;
     private float timer;
 
+    private float correctFrequency;
+
     [SerializeField] private AudioSource audioStatic;
     [SerializeField] private float audioStaticDivisor;
 
@@ -26,7 +28,8 @@ public class Radio : MonoBehaviour
 
     private void Update()
     {
-        LockSlider(GameManager.Instance.correctFrequencies[GameManager.Instance.CurrentPackage]);
+        correctFrequency = GameManager.Instance.correctFrequencies[GameManager.Instance.CurrentPackage];
+        LockSlider(correctFrequency);
     }
 
     private void LockSlider(float freq)
