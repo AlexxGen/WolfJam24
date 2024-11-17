@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: d4ec3f02344eac64482ad096ae313ec9
+guid: e887642cd7d789a4fa81c55e4d983f81
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - Bomber Brush
+  - Rough Serif
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
