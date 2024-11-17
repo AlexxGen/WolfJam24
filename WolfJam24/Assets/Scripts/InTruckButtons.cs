@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -12,6 +13,9 @@ public class InTruckButtons : MonoBehaviour
     public GameObject radio;
     public GameObject clipBoard;
     public GameObject clipBoard_1;
+
+
+    [SerializeField] private AudioSource[] envelopeNoises;
 
     public void Start()
     {
