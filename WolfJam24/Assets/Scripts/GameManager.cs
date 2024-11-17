@@ -34,11 +34,7 @@ public class GameManager : MonoBehaviour
 
     public void NextPackage()
     {
-        if (currentPackage == 2)
-        {
-            // Ending scene
-        }
-        else currentPackage++;
+        currentPackage++;
     }
 
     // Update is called once per frame
