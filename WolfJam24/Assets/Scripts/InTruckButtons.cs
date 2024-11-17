@@ -95,7 +95,7 @@ public class InTruckButtons : MonoBehaviour
 
     public void radioToggle()
     {
-        if(radio.active == true)
+        if(radio.activeSelf == true)
         {
             radio.SetActive(false);
         }
