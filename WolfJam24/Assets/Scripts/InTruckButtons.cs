@@ -104,9 +104,9 @@ public class InTruckButtons : MonoBehaviour
             radio.SetActive(true);
         }
     }
-
     public void quit()
     {
         SceneManager.LoadScene(0);
     }
+
 }

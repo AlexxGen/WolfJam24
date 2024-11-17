@@ -9,6 +9,8 @@ public class Radio : MonoBehaviour
 
     [SerializeField] private Slider slider;
     [SerializeField] private TextMeshProUGUI sliderText;
+    public GameObject phone;
+
     private float sliderValue;
     private float timer;
 
@@ -28,11 +30,12 @@ public class Radio : MonoBehaviour
 
     private void CorrectFrequencySelected()
     {
-
+        phone.SetActive(true);
     }
 
     private void Update()
     {
+        print(correctFrequency);
         correctFrequency = GameManager.Instance.correctFrequencies[GameManager.Instance.CurrentPackage];
         LockSlider(correctFrequency);
     }
@@ -42,7 +45,7 @@ public class Radio : MonoBehaviour
         if (sliderValue != freq) { timer = 0.0f; }
         else timer += Time.deltaTime;
 
-        if (timer > 1.5f) 
+        if (timer > 0.5f) 
         { 
             CorrectFrequencySelected();
             slider.interactable = false;

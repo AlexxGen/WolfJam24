@@ -8,6 +8,8 @@ using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
+    public GameObject phone;
+
     #region Serialized Fields
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject dialogueText;
@@ -64,6 +66,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartCall()
     {
+        phone.SetActive(false);
         EnterDialogueMode();
     }
 
