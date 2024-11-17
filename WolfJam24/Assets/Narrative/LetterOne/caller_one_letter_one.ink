@@ -26,7 +26,7 @@ I know there is no chance of it reaching it's destination now, but I was hoping 
 Ah, yes, my name is Flore. My siblings are Amerie and Teddy.
     #speaker: You 
     * [Can I ask about the news you shared?] -> news
-    * [Congragulations] -> congrats
+    * [Congratulations] -> congrats
 
 == news ==
 #speaker: Caller One 
