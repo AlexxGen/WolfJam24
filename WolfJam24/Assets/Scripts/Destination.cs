@@ -26,7 +26,11 @@ public class Destination : MonoBehaviour
         text.text = destName;
     }
 
-    public void SetCorrect(bool correct) {  isCorrect = correct; } 
+    public void SetCorrect(bool correct) 
+    {
+        if (correct) print(destName);
+        isCorrect = correct; 
+    } 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -43,6 +47,7 @@ public class Destination : MonoBehaviour
     {
         print("Delivery success");
         GameManager.Instance.deliveredGood = isCorrect;
+        print(GameManager.Instance.deliveredGood);
         SceneManager.LoadScene("cutScenes");
     }
 

@@ -21,6 +21,8 @@ public class CutsceneHandler : MonoBehaviour
         randomIndex = Random.Range(0, bgImages.Length);
         bgImages[randomIndex].SetActive(true);
 
+        print(GameManager.Instance.deliveredGood);
+
         sadPerson.SetActive(false);
 
         if (GameManager.Instance.deliveredGood)
