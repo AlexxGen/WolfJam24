@@ -8,6 +8,7 @@ Yeah, I'm a CS major, and so is my girlfriend.
 Her phone broke a bit ago, but it's all fixed now.
 I was having some stupid registration issues that didn't let sign up for like any classes.
 My girl and I had weekend plans to go to a totally rad party. That's about it.
+I live in Thoddingham.
 
 #speaker: You 
 Thanks for being willing to share again. Really appreciated, buddy.

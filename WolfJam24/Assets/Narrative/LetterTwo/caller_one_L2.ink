@@ -57,7 +57,7 @@ I couldn't wait to bring her to something like that.
 Thanks for sharing your story with me. There's another caller on deck for this letter, but it might be yours.
 Let's see what happens. I might be heading your way.
 #speaker: Caller One 
-Sure, I live.
+Sure, I live in Thoddingham.
     #speaker: You 
     * [Next caller] -> next
     * [Deliver] -> deliver

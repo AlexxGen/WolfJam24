@@ -71,6 +71,8 @@ Sure has. I hope something to brighten your day happens soon.
     -> wrap
 
 == wrap ==
+#speaker: Caller Two
+Thank you for hearing me out. I live in Limeleaf.
 #speaker: You 
 Truly, thank you so much for sharing your story. I hope I can do something to help you reconnect with what you've lost.
     * [Listen again] -> again

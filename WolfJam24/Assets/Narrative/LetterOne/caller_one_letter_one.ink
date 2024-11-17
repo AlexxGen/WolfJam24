@@ -61,6 +61,7 @@ I'm sure she thinks of you warmly, always.
 I'll be getting this letter to you soon.
 #speaker: Caller One 
 Thank you, thank you so much, truly. You're creating miracles, even in these terrible times.
+I live in Gaiyea.
     #speaker: You 
     * [Hear more] -> listen_again
     * [Deliver] -> deliver
