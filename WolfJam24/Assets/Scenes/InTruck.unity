@@ -7578,8 +7578,8 @@ MonoBehaviour:
   m_FillRect: {fileID: 1271031537}
   m_HandleRect: {fileID: 178523559}
   m_Direction: 0
-  m_MinValue: 95
-  m_MaxValue: 108
+  m_MinValue: 90
+  m_MaxValue: 110
   m_WholeNumbers: 0
   m_Value: 95
   m_OnValueChanged:
