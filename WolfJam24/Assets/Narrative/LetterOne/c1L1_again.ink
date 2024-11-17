@@ -7,7 +7,7 @@ My name is Flore. The letter you found, I was sending it to my mother.
 I wanted to know about my siblings, Amerie and Teddy, make sure they're okay, you know?
 I also wanted to tell her I finally got into school like she always hoped for me to do.
 It's been hard here, new country, no family, but I think I made her proud. I didn't waste her effort. 
-I hope you can believe me and bring my letter back.
+I hope you can believe me and bring my letter back. I live in Gaiyea.
     #speaker: You 
     * [Listen Again] -> listen_again
     * [Deliver] -> deliver
