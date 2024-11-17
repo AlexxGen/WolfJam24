@@ -2738,7 +2738,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1692463411}
         m_TargetAssemblyTypeName: InTruckButtons, Assembly-CSharp
-        m_MethodName: radioToggle
+        m_MethodName: clipBoardOff
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5248,7 +5248,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -19.66}
+  m_AnchoredPosition: {x: 0, y: -19.660004}
   m_SizeDelta: {x: -188.74, y: -155.24}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1480382665
