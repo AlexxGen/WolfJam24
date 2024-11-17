@@ -97,7 +97,7 @@ public class DialogueManager : MonoBehaviour
 
         if(deliverNow)
         {
-            SceneManager.LoadScene("Map");
+            SceneManager.LoadScene("DrivingTest");
         }
         else if(listenMore)
         {
