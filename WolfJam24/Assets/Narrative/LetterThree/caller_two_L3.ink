@@ -42,6 +42,9 @@ The joy of marriage...you just can't keep that to yourself.
 #speaker: You
 What a decadent wedding you had planned. I'm sorry you lost the opportunity to have it.
 I hope you're still trying to live it large, even if we have nothing. 
+#speaker: Caller Two
+I sure am. Swing by Oakley if that letter happens to be mine.
+    #speaker: You
     * [Next caller] -> next
     * [Deliver] -> deliver
     

@@ -43,6 +43,8 @@ It's just in the morning, so no food served.
     * [Wrap up] -> wrap
     
 == wrap ==
+#speaker: Caller One 
+If that letter is mine, my partner and I live in Harbrine.
 #speaker: You 
 It's great to hear about a joyous occasion admist these dreary days. 
 Even without a ceremony, I hope your relationship is going strong.
