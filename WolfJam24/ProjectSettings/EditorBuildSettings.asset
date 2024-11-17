@@ -12,9 +12,15 @@ EditorBuildSettings:
     path: Assets/Scenes/InTruck.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Map.unity
-    guid: b276cb0f4f207e4478a72dd1909d2492
+    path: Assets/Scenes/DrivingTest.unity
+    guid: 3228ee07f5225da43bfbc63ce4d5ca0b
   - enabled: 1
+    path: Assets/Scenes/endScreen.unity
+    guid: ba5505901fabb154085267b91681b21e
+  - enabled: 0
     path: Assets/Scenes/DialogueTest.unity
     guid: e161b75ab2c7ed2468c46dc060a0b610
+  - enabled: 0
+    path: Assets/Scenes/Map.unity
+    guid: b276cb0f4f207e4478a72dd1909d2492
   m_configObjects: {}
