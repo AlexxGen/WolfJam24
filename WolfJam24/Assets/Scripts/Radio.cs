@@ -19,6 +19,7 @@ public class Radio : MonoBehaviour
 
     [SerializeField] private AudioSource audioStatic;
     [SerializeField] private float audioStaticDivisor;
+    [SerializeField] private AudioSource audioPhone;
 
     void Start()
     {
@@ -58,6 +59,7 @@ public class Radio : MonoBehaviour
             onCorrectFrequency = true;
             CorrectFrequencySelected();
             slider.interactable = false;
+            audioPhone.Play();
         }
         audioStatic.volume = Mathf.Abs(sliderValue - freq) / audioStaticDivisor;
     }
